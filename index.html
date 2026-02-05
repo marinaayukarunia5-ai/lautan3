@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ocean Gallery</title>
+
+  <!-- Font estetik -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #0ea5e9, #0369a1, #082f49);
+      color: white;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: rgba(0,0,0,0.35);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: white;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: #7dd3fc;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: auto;
+      padding: 80px 20px;
+      text-align: center;
+      line-height: 1.9;
+    }
+
+    h1 { font-size: 42px; }
+    h2 { font-size: 30px; margin-bottom: 15px; }
+
+    p {
+      font-size: 16px;
+      opacity: 0.95;
+      margin-bottom: 15px;
+    }
+
+    /* UPLOAD AREA */
+    .upload-area {
+      margin-top: 35px;
+      padding: 35px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.1);
+      border: 2px dashed #7dd3fc;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .upload-btn {
+      background: #38bdf8;
+      color: #083344;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .upload-btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== TAMBAHAN: FOTO TETAP (BUKAN UNTUK PENGUNJUNG) ===== */
+    .static-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .static-gallery img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.35);
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      opacity: 0.7;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">🌊 Ocean Space</div>
+    <div class="menu">
+      <a href="#home">Home</a>
+      <a href="#about">Tentang Laut</a>
+      <a href="#story">Cerita</a>
+      <a href="#gallery">Galeri</a>
+      <a href="#koleksi">Koleksi</a>
+      <a href="#contact">Kontak</a>
+    </div>
+  </nav>
+
+  <!-- HOME -->
+  <section class="section" id="home">
+    <h1>Dunia Biru yang Menenangkan</h1>
+    <p>Laut selalu punya cara sederhana untuk membuat hati terasa lebih ringan. Warna birunya luas tanpa batas, seakan mengajak siapa saja untuk berhenti sejenak dari hiruk‑pikuk kehidupan dan menikmati ketenangan.</p>
+    <p>Suara ombak yang datang dan pergi terdengar seperti alunan musik alami. Setiap deburan membawa rasa damai, sementara angin pantai menyentuh wajah dengan lembut.</p>
+    <p>Website ini dibuat untuk menghadirkan suasana tersebut ke dalam bentuk digital. Sebuah ruang kecil tempat kamu bisa membaca, bercerita, dan menyimpan momen berharga melalui foto‑foto pilihanmu.</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <h2>Tentang Lautan</h2>
+    <p>Lautan menutupi sebagian besar permukaan bumi dan menjadi rumah bagi jutaan spesies makhluk hidup. Terumbu karang, ikan berwarna‑warni, dan hamparan pasir putih adalah bukti bahwa alam menyimpan keindahan yang luar biasa.</p>
+    <p>Banyak orang datang ke pantai untuk mencari inspirasi, menulis cerita, atau sekadar menenangkan pikiran. Tidak heran jika laut sering dikaitkan dengan perasaan damai dan kebebasan.</p>
+    <p>Melalui halaman ini, kamu bisa merasakan kembali kenangan liburan, perjalanan, atau momen sederhana yang pernah kamu alami bersama laut.</p>
+  </section>
+
+  <!-- STORY -->
+  <section class="section" id="story">
+    <h2>Cerita di Balik Ombak</h2>
+    <p>Setiap ombak membawa cerita. Ada tawa, ada kenangan, ada langkah kaki kecil di pasir yang perlahan menghilang tersapu air. Semua itu menjadi bagian dari perjalanan hidup kita.</p>
+    <p>Bayangkan duduk di tepi pantai saat matahari terbenam. Langit berubah jingga, angin berembus pelan, dan waktu terasa berjalan lebih lambat. Saat itulah banyak orang merasa paling dekat dengan dirinya sendiri.</p>
+    <p>Semoga halaman ini bisa menjadi tempat untuk menyimpan cerita‑cerita kecilmu juga.</p>
+  </section>
+
+  <!-- GALLERY (UNTUK PENGUNJUNG) -->
+  <section class="section" id="gallery">
+    <h2>Galeri Kenangan</h2>
+    <p>Bagian ini adalah tempat kamu mengumpulkan momen terbaik. Kamu bisa memasukkan beberapa foto sekaligus dan semuanya akan tampil otomatis sebagai galeri kecil.</p>
+
+    <div class="upload-area">
+      <label class="upload-btn" for="fileInput">Tambah Foto ke Galeri</label>
+      <input id="fileInput" type="file" accept="image/*" multiple onchange="previewImages(event)">
+      <div class="gallery" id="galleryPreview"></div>
+    </div>
+  </section>
+
+  <!-- ===== TAMBAHAN: KOLEKSI FOTO TETAP (HANYA PEMILIK WEBSITE) ===== -->
+  <section class="section" id="koleksi">
+    <h2>Koleksi Pribadi</h2>
+    <p>Bagian ini khusus untuk foto yang kamu masukkan langsung di kode website, bukan dari pengunjung. Tambahkan file gambarmu di folder project lalu ganti nama filenya di bawah.</p>
+
+    <div class="static-gallery">
+      <img src="foto1.jpg" alt="Foto 1">
+      <img src="foto2.jpg" alt="Foto 2">
+      <img src="foto3.jpg" alt="Foto 3">
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <h2>Penutup</h2>
+    <p>Terima kasih sudah berkunjung ke halaman bertema lautan ini. Semoga suasana birunya membawa ketenangan dan membuat harimu terasa lebih ringan.</p>
+  </section>
+
+  <footer>
+    © 2026 Ocean Theme Website | Dibuat dengan nuansa laut yang damai 🌊
+  </footer>
+
+  <script>
+    function previewImages(event) {
+      const container = document.getElementById('galleryPreview');
+      const files = event.target.files;
+
+      for (let i = 0; i < files.length; i++) {
+        const img = document.createElement('img');
+        img.src = URL.createObjectURL(files[i]);
+        container.appendChild(img);
+      }
+    }
+  </script>
+
+</body>
+</html>
